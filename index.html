@@ -47,16 +47,21 @@
             -webkit-align-items: center;
             align-items: center;
             position:relative;
-            z-index:1;
+
         }
         .swiper-slide .bg{
             position:absolute;
             width:100%;
             height:100%;
             z-index:10;
-            transform: rotate(-10deg);
-            -webkit-transform: rotate(-10deg);
-            -moz-transform: rotate(-10deg);
+            transform:scale(2)  rotate(-10deg);
+            -webkit-transform:scale(2)  rotate(-10deg);
+            -moz-transform:scale(2)  rotate(-10deg);
+            top:0;
+            left:0;
+        }
+        .swiper-slide img{
+            z-index:1;
         }
         .swiper-slide .small{
             width:100%;
@@ -65,16 +70,16 @@
             background:pink;
         }
         .swiper-slide .bg .top{
-            top:0%;
-            transform:scale(2) translateX(50px);
-            -moz-transform:scale(2) translateX(50px);
-            -webkit-transform:scale(2) translateX(50px);
+            top:10%;
+            /*transform:translateX(50px);*/
+            /*-webkit-transform:scale(2);*/
+            /*-moz-transform:scale(2) ;*/
         }
         .swiper-slide .bg .bot{
-            bottom:0%;
-            transform:scale(2)  translateX(0px);
-            -moz-transform:scale(2) translateX(50px);
-            -webkit-transform:scale(2) translateX(50px);
+            bottom:11%;
+            /*transform:scale(2) translateX(0px);*/
+            /*-webkit-transform:scale(2) ;*/
+            /*-moz-transform:scale(2) ;*/
         }
     </style>
     <script src="js/jquery-1.10.1.min.js"></script>
@@ -105,19 +110,61 @@
                 <img src="images/0.jpg" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="images/1.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+                <img src="images/1.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                <div class="bg">
+                    <div class="top small ani"  swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
+                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/2.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
                 <div class="bg">
                     <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
                     <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
                 </div>
             </div>
-            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/7.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/8.jpg" alt=""></div>
+            <div class="swiper-slide">
+                <img src="images/3.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                <div class="bg">
+                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
+                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/4.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                <div class="bg">
+                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
+                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/5.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                <div class="bg">
+                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
+                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/6.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                <div class="bg">
+                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
+                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/7.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                <div class="bg">
+                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
+                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/8.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                <div class="bg">
+                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1s" ></div>
+                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1s" ></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
