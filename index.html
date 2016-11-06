@@ -92,7 +92,7 @@
         $(function(){
             var swiper = new Swiper('.swiper', {
                 onInit: function(swiper){
-                    swiperAnimateCache(); //隐藏动画元素
+                    //隐藏动画元素
                     swiperAnimate(swiper); //初始化完成开始动画
                 },
                 onSlideChangeEnd: function(swiper){
@@ -100,7 +100,18 @@
                 },
                 pagination: '.swiper-pagination',
                 direction: 'vertical',
+                onTouchStart:function(swiper){
+                    $(".swiper-slide").find(".bg").children().removeClass("ani animated")
+                    $(".swiper-slide").find("img").removeClass("ani animated")
+
+
+                    $(".swiper-slide-next").find(".bg").children().addClass("ani")
+                    $(".swiper-slide-next").find("img").addClass("ani")
+
+                }
+
             });
+
         })
     </script>
 </head>
@@ -112,59 +123,59 @@
                 <img src="images/0.jpg" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="images/1.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/1.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani"  swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small "  swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/2.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/2.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small " swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/3.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/3.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small " swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/4.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/4.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small " swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/5.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/5.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small " swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/6.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/6.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small " swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/7.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/7.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small " swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/8.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
+                <img src="images/8.jpg" alt="" class="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
                 <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
+                    <div class="top small " swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
+                    <div class="bot small " swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
                 </div>
             </div>
         </div>
