@@ -3,78 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>我的相册</title>
+    <title>生日快乐</title>
     <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <style>
+        *{margin:0;padding:0;}
+        body,html{width:100%;height:100%;}
+        #go{width:28px;height:14px;background:url(images/go.png) no-repeat;position:fixed;bottom:40px;z-index:10;left:50%;margin-left:-14px;animation:go 2s infinite;}
+        #music{position:fixed;top:30px;right:30px;z-index:10;width:44px;height:44px;}
+        #music img{position:absolute;top:-30px;}
+        #music .musci_bg{animation:music 2s infinite;width:44px;height:44px;background:url(images/mm.png) no-repeat;}
+        .swiper{width:100%;height:100%;}
+        .swiper-wrapper{height:100%;width:100%;}
+        .swiper-wrapper .swiper-slide{width:100%;height:100%;background-size:cover;background-repeat:no-repeat;}
+        .swiper-wrapper .one{background-image:url(images/bg1.jpg);}
+        .swiper-wrapper .one .lulu{width:70%;margin:25% 15% 0%;}
+        .swiper-wrapper .one .dan{width:80%;margin:0% 15%;}
+
+        .swiper-wrapper .yang{background-image:url(images/bg2.jpg);}
+        .swiper-wrapper .yang .ma{width:80%;left:0%;bottom:0;position:absolute;}
+        .swiper-wrapper .yang .zhao{position:absolute;right:0;bottom:0;width:70%;}
+        .swiper-wrapper .yang .hua{z-index:40;position:absolute;width:80%;left:10%;
+            bottom:0px;}
+        .swiper-wrapper .yang .love{z-index:30;position:absolute;width:80%;left:10%;}
+        .swiper-wrapper .last{background-image:url(images/last_bg.png);background-position:60%;}
+        .swiper-wrapper .last .redbook{width:80%;left:10%;position:absolute;bottom:0;}
+        .swiper-wrapper .swiper-slide p{width:100%;text-align:center;position:absolute;color:pink;font-size:2em;top:20%;}
+
+
+        @keyframes music{
+            0%{transform:rotate(0deg)}
+            100%{transform:rotate(360deg)}
+        } 
+        @keyframes go{
+            0%{bottom:25px;opacity:0;}
+            100%{bottom:40px;opacity:1;}
+        }
+       
+    </style>
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/swiper-3.4.0.jquery.min.js"></script>
     <script src="js/swiper.animate1.0.2.min.js"></script>
-    <script src="js/index.js"></script>
+    <script>
+        $(function(){
+            var swiper = new Swiper('.swiper', {
+                direction: 'vertical',
+                pagination: '.swiper-pagination',
+                onInit: function(swiper){
+                    swiperAnimateCache(swiper); //隐藏动画元素
+                    swiperAnimate(swiper); //初始化完成开始动画
+                },
+                onSlideChangeEnd: function(swiper){
+                    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                }
+            });
+        })
+    </script>
 </head>
 <body>
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/0.jpg" alt="">
+            <div class="swiper-slide one">
+                <img class="lulu ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2s" src="images/happy.png" alt="">
+                <img class="dan ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="2s" swiper-animate-delay="1s" src="images/dan.png" alt="">
             </div>
-            <div class="swiper-slide">
-                <img src="images/1.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani"  swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
+            <div class="swiper-slide yang">
+                <img class="ma ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"  src="images/ma.png" alt="">
+               <p class="t ani" swiper-animate-effect="rubberBand" swiper-animate-duration="1s" swiper-animate-delay="0.5s">胡歌送你玫瑰</p>
+
             </div>
-            <div class="swiper-slide">
-                <img src="images/2.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
+            <div class="swiper-slide yang">
+                <img class="zhao ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s" src="images/4.png" alt="">
+                <p class="t ani" swiper-animate-effect="rubberBand" swiper-animate-duration="1s" swiper-animate-delay="0.5s">记录你美一个瞬间</p>
             </div>
-            <div class="swiper-slide">
-                <img src="images/3.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
+            <div class="swiper-slide yang">
+                <img class="hua ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s" src="images/3.png" alt="">
+                <img class="love ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.5s" swiper-animate-delay="2s" src="images/love.png" alt="">
+                <p class="t ani" swiper-animate-effect="rubberBand" swiper-animate-duration="1s" swiper-animate-delay="0.5s">嫁给他、嫁给他</p>
             </div>
-            <div class="swiper-slide">
-                <img src="images/4.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
+            <div class="swiper-slide last">                
+                <img class="redbook ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s" src="images/last.png" alt="">
+                
             </div>
-            <div class="swiper-slide">
-                <img src="images/5.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/6.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/7.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/8.jpg" alt="" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".2s">
-                <div class="bg">
-                    <div class="top small ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="1.5s" ></div>
-                    <div class="bot small ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="1.5s" ></div>
-                </div>
-            </div>
+
         </div>
+        <div class="swiper-pagination"></div>
+        <div id="music">
+            <div class="musci_bg"></div>
+            <img src="images/music.gif" alt="">
+        </div>     
+        <div id="go">
+        </div>
+            
+        <audio src="images/music.mp3" autoplay loop ></audio>
     </div>
+
 </body>
 </html>
